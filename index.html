@@ -12,14 +12,14 @@ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 background:#0f1115;
 color:#f5f5f7;
 overflow-x:hidden;
-transition:background 0.8s ease;
+transition:background .6s ease;
 }
 .background-glow{
 position:fixed;top:-20%;left:-20%;
 width:140%;height:140%;
 background:
-radial-gradient(circle at 30% 40%, rgba(77,163,255,0.25), transparent 40%),
-radial-gradient(circle at 70% 60%, rgba(0,80,200,0.2), transparent 40%);
+radial-gradient(circle at 30% 40%, rgba(77,163,255,.25), transparent 40%),
+radial-gradient(circle at 70% 60%, rgba(0,80,200,.2), transparent 40%);
 animation:moveGlow 14s infinite alternate ease-in-out;
 z-index:-2;
 }
@@ -33,16 +33,15 @@ section{padding:120px 10%;max-width:1100px;margin:auto}
 .photo{
 width:220px;height:220px;border-radius:24px;
 background:linear-gradient(145deg,#1b1f27,#11141a);
-border:1px solid rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,.1);
 display:flex;align-items:center;justify-content:center;
 color:#6b7280;font-size:14px
 }
-.photo img{width:100%;height:100%;object-fit:cover;border-radius:24px}
 .hero h1{font-size:64px;color:#4da3ff;margin-bottom:25px}
 .lang-switch{position:absolute;top:40px;right:10%;display:flex;gap:10px}
 .lang-btn{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.2);
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.2);
 color:#f5f5f7;padding:6px 14px;border-radius:20px;
 cursor:pointer;transition:.3s
 }
@@ -51,10 +50,10 @@ cursor:pointer;transition:.3s
 h2{font-size:32px;margin:80px 0 40px;color:#4da3ff}
 .block{
 margin-bottom:70px;padding:35px;border-radius:24px;
-background:rgba(255,255,255,0.03);
-border:1px solid rgba(255,255,255,0.08);
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
 transform:translateY(60px);opacity:0;
-transition:all .9s ease
+transition:all .8s ease
 }
 .block.visible{transform:translateY(0);opacity:1}
 ul{padding-left:20px;margin-top:10px;color:#d1d5db}
@@ -94,13 +93,14 @@ Adresse: Deutschland
 <footer>© 2026 Maksym Riabtsev</footer>
 
 <script>
+
 const content = {
+
 de: `
 
 <h2>BERUFSERFAHRUNG</h2>
 
-<div class="block">
-<strong>04/2024 – 02/2026</strong><br>
+<div class="block"><strong>04/2024 – 02/2026</strong><br>
 European Homecare GmbH, 04/2024 – Sozialbetreuer
 <ul>
 <li>Erstaufnahme, Begleitung und administrative Betreuung von Klienten</li>
@@ -108,7 +108,68 @@ European Homecare GmbH, 04/2024 – Sozialbetreuer
 <li>Organisation und Begleitung von Terminen, z. B. Behörden oder Arztbesuche</li>
 <li>Ansprechpartner für soziale Anliegen und Beratung</li>
 <li>Dokumentation und Berichtswesen zur Lebenssituation der betreuten Personen</li>
-</ul>
+</ul></div>
+
+<div class="block"><strong>09/2023 – 03/2024</strong><br>
+Gronebildungszentrum GmbH, Remscheid<br>
+Berufsprachkurs bis B1.</div>
+
+<div class="block"><strong>12/2022 – 06/2023</strong><br>
+Internationaler Bund, Remscheid<br>
+Integrationskurs inklusiv Sprachkurs - bis A2 bestanden</div>
+
+<div class="block"><strong>09/2022</strong><br>
+Einreise nach Deutschland</div>
+
+<div class="block"><strong>11/2017 – 04/2018</strong><br>
+Cafeteria, Lugansk “Hookah Bar”<br>
+Mitgründer und Mitinhaber eines Gastronomieprojekts – Konzeption, Aufbau und anschließende Weiterveräußerung
+<ul>
+<li>Entwicklung des Gastronomiekonzepts und Gestaltung des Designs</li>
+<li>Auswahl und Koordination von Dienstleistern und Mitarbeitern</li>
+<li>Organisation der Erstellung von Werbematerialien und Außenwerbung</li>
+<li>Planung und Umsetzung von Marketingmaßnahmen</li>
+<li>Operative Begleitung bis zur erfolgreichen Weiterveräußerung</li>
+</ul></div>
+
+<div class="block"><strong>01/2015 – 08/2017</strong><br>
+Moskauer Puppentheater in Lebensgröße, Moskau<br>
+Vertrieb & Veranstaltungsmarketing
+<ul>
+<li>Aufbau und Pflege von Vertriebskanälen für Theaterveranstaltungen</li>
+<li>Verhandlungen mit Kulturinstitutionen, Medienpartnern und Gewerkschaften</li>
+<li>Planung und Umsetzung regionaler Werbekampagnen</li>
+<li>Analyse von Verkaufszahlen und Provisionsberechnung</li>
+<li>Verantwortung für Ticketverkauf und Kassenmanagement</li>
+</ul></div>
+
+<div class="block"><strong>02/2014 – 04/2014</strong><br>
+Jurist der Wahlkommission – Präsidentschaftswahlen Ukraine 2014
+<ul>
+<li>Annahme und formelle Prüfung von Unterlagen</li>
+<li>Mitwirkung bei der Aufnahme neuer Mitarbeiter</li>
+<li>Mitarbeit in mobilen Gruppen des Wahlkampfstabs</li>
+</ul></div>
+
+<h2>BERUFSAUSBILDUNG</h2>
+
+<div class="block">
+09/2011 – 02/2014<br>
+Interregionale Akademie für Personalmanagement, Kiew<br>
+Abschluss: Bachelor Rechtswissenschaften
+</div>
+
+<div class="block">
+09/2007 – 06/2011<br>
+Polytechnisches College der nationalen Agrar-Universität Lugansk<br>
+Abschluss: Junior Spezialist
+</div>
+
+<h2>SCHULBILDUNG</h2>
+
+<div class="block">
+09/1999 – 06/2007<br>
+Spezialisierte Schule Nr. 36, Lugansk
 </div>
 
 <h2>BESONDERE KENNTNISSE</h2>
@@ -126,45 +187,84 @@ Sprachen
 
 ru: `
 <h2>ОПЫТ РАБОТЫ</h2>
-<div class="block">
-<strong>04/2024 – 02/2026</strong><br>
+<div class="block"><strong>04/2024 – 02/2026</strong><br>
 European Homecare GmbH – Социальный работник
 <ul>
-<li>Первичный приём, сопровождение и административная поддержка клиентов</li>
+<li>Первичный приём и административная поддержка клиентов</li>
 <li>Помощь в повседневных задачах и развитие самостоятельности</li>
-<li>Организация и сопровождение на приёмы (госорганы, врачи)</li>
+<li>Сопровождение к врачам и в государственные органы</li>
 <li>Консультирование по социальным вопросам</li>
 <li>Документация и отчётность</li>
+</ul></div>
+
+<h2>ОБРАЗОВАНИЕ</h2>
+<div class="block">
+Бакалавр права, Киев
+</div>
+
+<h2>ЯЗЫКИ</h2>
+<div class="block">
+<ul>
+<li>Немецкий – B1</li>
+<li>Английский – B1</li>
+<li>Украинский – родной</li>
+<li>Русский – родной</li>
 </ul>
 </div>
 `,
 
 ua: `
 <h2>ДОСВІД РОБОТИ</h2>
-<div class="block">
-<strong>04/2024 – 02/2026</strong><br>
+<div class="block"><strong>04/2024 – 02/2026</strong><br>
 European Homecare GmbH – Соціальний працівник
 <ul>
-<li>Первинний прийом та адміністративна підтримка клієнтів</li>
+<li>Первинний прийом клієнтів та адміністративна підтримка</li>
 <li>Допомога у повсякденних завданнях</li>
-<li>Супровід до державних органів та лікарів</li>
-<li>Консультації з соціальних питань</li>
-<li>Документація</li>
+<li>Супровід до лікарів та державних органів</li>
+<li>Соціальні консультації</li>
+<li>Ведення документації</li>
+</ul></div>
+
+<h2>ОСВІТА</h2>
+<div class="block">
+Бакалавр права, Київ
+</div>
+
+<h2>МОВИ</h2>
+<div class="block">
+<ul>
+<li>Німецька – B1</li>
+<li>Англійська – B1</li>
+<li>Українська – рідна</li>
+<li>Російська – рідна</li>
 </ul>
 </div>
 `,
 
 en: `
 <h2>WORK EXPERIENCE</h2>
-<div class="block">
-<strong>04/2024 – 02/2026</strong><br>
+<div class="block"><strong>04/2024 – 02/2026</strong><br>
 European Homecare GmbH – Social Care Worker
 <ul>
-<li>Initial reception and administrative support for clients</li>
-<li>Support in daily tasks and promoting independence</li>
+<li>Initial reception and administrative support of clients</li>
+<li>Support in daily tasks and promotion of independence</li>
 <li>Accompanying clients to authorities and medical appointments</li>
 <li>Advising on social matters</li>
 <li>Documentation and reporting</li>
+</ul></div>
+
+<h2>EDUCATION</h2>
+<div class="block">
+Bachelor of Law, Kyiv
+</div>
+
+<h2>LANGUAGES</h2>
+<div class="block">
+<ul>
+<li>German – B1</li>
+<li>English – B1</li>
+<li>Ukrainian – Native</li>
+<li>Russian – Native</li>
 </ul>
 </div>
 `
@@ -174,7 +274,12 @@ function setLang(lang){
 document.documentElement.lang = lang;
 document.getElementById("content").innerHTML = content[lang];
 localStorage.setItem("lang",lang);
-setTimeout(reveal,100);
+initReveal();
+}
+
+function initReveal(){
+document.querySelectorAll(".block").forEach(b=>b.classList.remove("visible"));
+reveal();
 }
 
 function reveal(){
@@ -183,7 +288,7 @@ if(b.getBoundingClientRect().top < window.innerHeight*0.85){
 b.classList.add("visible");
 }
 });
-if(window.scrollY > 600){
+if(window.scrollY>600){
 document.body.style.background="#0b1220";
 }else{
 document.body.style.background="#0f1115";
@@ -191,7 +296,6 @@ document.body.style.background="#0f1115";
 }
 
 window.addEventListener("scroll",reveal);
-
 window.onload=function(){
 setLang(localStorage.getItem("lang")||"de");
 };
