@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maksym Riabtsev</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
+background:#0f1115;
+color:#f5f5f7;
+overflow-x:hidden;
+transition:background 1.2s ease, opacity 0.3s ease;
+}
+
+/* Glow background */
+.background-glow{
+position:fixed;
+top:-20%;
+left:-20%;
+width:140%;
+height:140%;
+background:
+radial-gradient(circle at 30% 40%, rgba(77,163,255,0.25), transparent 40%),
+radial-gradient(circle at 70% 60%, rgba(0,80,200,0.2), transparent 40%);
+animation:moveGlow 14s infinite alternate ease-in-out;
+z-index:-2;
+}
+
+@keyframes moveGlow{
+0%{transform:translate(0,0) scale(1);}
+100%{transform:translate(-6%,6%) scale(1.12);}
+}
+
+section{
+padding:140px 10%;
+max-width:1100px;
+margin:auto;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+position:relative;
+}
+
+.hero h1{
+font-size:72px;
+font-weight:600;
+letter-spacing:-1px;
+color:#4da3ff;
+margin-bottom:25px;
+}
+
+/* Language switch */
+.lang-switch{
+position:absolute;
+top:40px;
+right:10%;
+display:flex;
+gap:10px;
+}
+
+.lang-btn{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.2);
+color:#f5f5f7;
+padding:6px 14px;
+border-radius:20px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.lang-btn:hover{
+background:#4da3ff;
+color:#0f1115;
+}
+
+.contact-line{
+font-size:18px;
+color:#c7c7cc;
+margin-bottom:40px;
+line-height:1.8;
+}
+
+.contact-line a{
+color:#c7c7cc;
+text-decoration:none;
+}
+
+.contact-line a:hover{
+color:#4da3ff;
+}
+
+h2{
+font-size:34px;
+margin-bottom:70px;
+color:#4da3ff;
+}
+
+.job{
+margin-bottom:80px;
+padding:35px;
+border-radius:24px;
+backdrop-filter:blur(16px);
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.06);
+transform:translateY(60px) scale(0.96);
+opacity:0;
+transition:all 0.9s cubic-bezier(.17,.84,.44,1);
+}
+
+.job.visible{
+transform:translateY(0) scale(1);
+opacity:1;
+}
+
+.job h3{
+font-size:20px;
+margin-bottom:6px;
+}
+
+.job span{
+display:block;
+font-size:14px;
+color:#9ca3af;
+margin-bottom:10px;
+}
+
+ul{padding-left:20px;color:#d1d5db;}
+li{margin-bottom:8px;}
+
+footer{
+padding:100px 10%;
+text-align:center;
+color:#6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<section class="hero">
+
+<div class="lang-switch">
+<button class="lang-btn" onclick="setLang('de')">DE</button>
+<button class="lang-btn" onclick="setLang('ua')">UA</button>
+<button class="lang-btn" onclick="setLang('ru')">RU</button>
+</div>
+
+<h1>Maksym Riabtsev</h1>
+
+<div class="contact-line">
+<div>Telefon: <a href="tel:+49XXXXXXXXX">+49 XXX XXXXXXX</a></div>
+<div>E-Mail: <a href="mailto:your@email.de">your@email.de</a></div>
+<div>Adresse: Straße, PLZ Ort, Deutschland</div>
+</div>
+
+</section>
+
+<section>
+<h2 id="about-title">Über mich</h2>
+<div class="job">
+<p id="about-text">
+Kommunikation · Strukturierung · Administrative Kompetenz · Unternehmerisches Denken · Verantwortung
+</p>
+</div>
+</section>
+
+<section>
+<h2>Berufserfahrung</h2>
+
+<div class="job">
+<h3>European Homecare GmbH</h3>
+<span>04/2024 – 02/2026</span>
+<ul>
+<li>Erstaufnahme, Begleitung und administrative Betreuung von Klienten</li>
+<li>Unterstützung bei Alltagsaufgaben und Förderung der Selbstständigkeit</li>
+<li>Organisation und Begleitung von Terminen (Behörden, Arztbesuche)</li>
+<li>Ansprechpartner für soziale Anliegen und Beratung</li>
+<li>Dokumentation und Berichtswesen zur Lebenssituation</li>
+</ul>
+</div>
+
+<div class="job">
+<h3>Cafeteria “Hookah Bar”, Lugansk</h3>
+<span>11/2017 – 04/2018</span>
+<ul>
+<li>Mitgründer und Mitinhaber eines Gastronomieprojekts</li>
+<li>Entwicklung des Gastronomiekonzepts und Gestaltung</li>
+<li>Auswahl und Koordination von Dienstleistern und Mitarbeitern</li>
+<li>Organisation von Werbematerialien und Außenwerbung</li>
+<li>Planung von Marketingmaßnahmen</li>
+<li>Operative Begleitung bis zur erfolgreichen Weiterveräußerung</li>
+</ul>
+</div>
+
+<div class="job">
+<h3>Moskauer Puppentheater in Lebensgröße, Moskau</h3>
+<span>01/2015 – 08/2017</span>
+<ul>
+<li>Aufbau und Pflege von Vertriebskanälen</li>
+<li>Verhandlungen mit Kulturinstitutionen und Medienpartnern</li>
+<li>Planung regionaler Werbekampagnen (TV, Radio, Außenwerbung)</li>
+<li>Analyse von Verkaufszahlen und Provisionsberechnung</li>
+<li>Verantwortung für Ticketverkauf und Kassenmanagement</li>
+</ul>
+</div>
+
+<div class="job">
+<h3>Jurist der Wahlkommission – Präsidentschaftswahlen Ukraine 2014</h3>
+<span>02/2014 – 04/2014</span>
+<ul>
+<li>Annahme und formelle Prüfung von Unterlagen</li>
+<li>Mitwirkung bei der Aufnahme neuer Mitarbeiter</li>
+<li>Mitarbeit in mobilen Gruppen des Wahlkampfstabs</li>
+</ul>
+</div>
+
+</section>
+
+<section id="education">
+<h2>Ausbildung & Integration</h2>
+
+<div class="job">
+<h3>Einreise nach Deutschland</h3>
+<span>09/2022</span>
+</div>
+
+<div class="job">
+<h3>Internationaler Bund, Remscheid</h3>
+<span>12/2022 – 06/2023</span>
+<ul>
+<li>Integrationskurs inkl. Sprachkurs bis A2 (bestanden)</li>
+</ul>
+</div>
+
+<div class="job">
+<h3>Grone GmbH, Remscheid</h3>
+<span>09/2023 – 03/2024</span>
+<ul>
+<li>Berufssprachkurs bis B1</li>
+</ul>
+</div>
+
+<div class="job">
+<h3>Interregionale Akademie für Personalmanagement, Kiew</h3>
+<span>09/2011 – 02/2014</span>
+<ul>
+<li>Bachelor Rechtswissenschaften</li>
+</ul>
+</div>
+
+<div class="job">
+<h3>Polytechnisches College der Nationalen Agrar-Universität, Lugansk</h3>
+<span>09/2007 – 06/2011</span>
+<ul>
+<li>Fachrichtung Rechtswissenschaft</li>
+<li>Abschluss: Junior Spezialist</li>
+<li>Allgemeine Hochschulreife</li>
+</ul>
+</div>
+
+</section>
+
+<section>
+<h2>Sprachen</h2>
+<div class="job">
+<ul>
+<li>Ukrainisch – Muttersprache</li>
+<li>Russisch – Muttersprache</li>
+<li>Englisch – B1</li>
+<li>Deutsch – B1</li>
+</ul>
+</div>
+</section>
+
+<footer>
+© 2026 Maksym Riabtsev
+</footer>
+
+<script>
+const jobs=document.querySelectorAll(".job");
+const education=document.getElementById("education");
+
+function reveal(){
+const trigger=window.innerHeight*0.85;
+
+jobs.forEach(job=>{
+const top=job.getBoundingClientRect().top;
+if(top<trigger){ job.classList.add("visible"); }
+});
+
+if(education.getBoundingClientRect().top<window.innerHeight/2){
+document.body.style.background="#0b1220";
+}else{
+document.body.style.background="#0f1115";
+}
+}
+
+window.addEventListener("scroll",reveal);
+window.addEventListener("load",reveal);
+
+/* Language system */
+const translations={
+de:{
+title:"Über mich",
+text:"Kommunikation · Strukturierung · Administrative Kompetenz · Unternehmerisches Denken · Verantwortung"
+},
+ua:{
+title:"Про мене",
+text:"Комунікація · Структурність · Адміністративна компетентність · Підприємницьке мислення · Відповідальність"
+},
+ru:{
+title:"Обо мне",
+text:"Коммуникация · Структурность · Административная компетентность · Предпринимательское мышление · Ответственность"
+}
+};
+
+function setLang(lang){
+document.body.style.opacity="0.7";
+setTimeout(()=>{
+document.getElementById("about-title").innerText=translations[lang].title;
+document.getElementById("about-text").innerText=translations[lang].text;
+localStorage.setItem("siteLang",lang);
+document.body.style.opacity="1";
+},150);
+}
+
+window.addEventListener("load",()=>{
+const saved=localStorage.getItem("siteLang") || "de";
+setLang(saved);
+});
+</script>
+
+</body>
+</html>
